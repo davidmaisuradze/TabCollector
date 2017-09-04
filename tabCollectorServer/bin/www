@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 
-var app = require('../app/app');
+var app = require('../src/app/app');
 var debug = require('debug')('tabcollector:server');
 var http = require('http');
 
