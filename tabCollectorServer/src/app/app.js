@@ -4,11 +4,15 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
 
 var index = require('./controllers/index');
 var users = require('./controllers/users');
 
 var app = express();
+
+//connect to database
+mongoose.connect('mongodb://geodato:ILCvm@ds036617.mlab.com:36617/tabcollector');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
